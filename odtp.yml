@@ -1,0 +1,27 @@
+# This file should contain basic component information such as 
+
+- name: Name of your tool
+- repo: Repo of your tool
+- author: Author of the Component
+- original_author: Author of the tool
+- description: Small description of your tool
+- arguments:
+  - options: [optionA, optionB]
+  - float: 0.001
+  - integer: 1234
+  - sring: 24G
+- volume:
+  - data: /odtp/odtp-volume/data
+- ports:
+  - api: 7100
+  - logger: 7101
+- devices:
+  - gpus: False
+- inputSchema: ...
+- outputSchema: ...
+- env:
+  - MONGODB_CLIENT
+  - S3_SERVER
+  - S3_ACCESS_KEY
+  - S3_SECRET_KEY
+  - S3_BUCKET_NAME
