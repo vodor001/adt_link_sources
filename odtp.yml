@@ -5,11 +5,12 @@
 - author: Author of the Component
 - original_author: Author of the tool
 - description: Small description of your tool
+- odtp_version: 0.2.0
 - arguments:
   - options: [optionA, optionB]
   - float: 0.001
   - integer: 1234
-  - sring: 24G
+  - string: 24G
 - volume:
   - data: /odtp/odtp-volume/data
 - ports:
