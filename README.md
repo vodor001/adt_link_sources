@@ -54,3 +54,20 @@ docker build -t odtp-app .
 ```
 docker run -it --rm -v {PATH_TO_YOUR_VOLUME}:/odtp/odtp-volume --env-file .env odtp-app
 ```
+
+## Changelog
+
+- v.0.2.0
+    - Compatible with ODTP v.0.2.0 only with platform / components
+    - Compatible with configuration text files
+    - Improved loging system
+    - Accepting Digital Twins, Executions, and steps, metadata.
+    - Including component versioning in `odtp.yml` 
+
+- v.0.1.0
+    - Compatible with ODTP v.0.1.0 only with platform / components
+    - Compatible with configuration text files
+
+## Development
+
+Developed by SDSC/CSFM

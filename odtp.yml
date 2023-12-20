@@ -1,27 +1,35 @@
-# This file should contain basic component information such as 
-
-- name: Name of your tool
-- repo: Repo of your tool
-- author: Author of the Component
+# This file should contain basic component information for your component.
+- name: Name of the component
+- component_version: Version
+- repository: Repository
+- commit:
+- author: Author of the component
 - original_author: Author of the tool
-- description: Small description of your tool
+- description: Description
+- tags: ["example", "tutorial"]
 - arguments:
-  - options: [optionA, optionB]
-  - float: 0.001
-  - integer: 1234
-  - sring: 24G
-- volume:
-  - data: /odtp/odtp-volume/data
-- ports:
-  - api: 7100
-  - logger: 7101
+  - PARAMETER A: ..
+- inputs:
+  - data: /data
 - devices:
   - gpus: False
 - inputSchema: ...
 - outputSchema: ...
 - env:
-  - MONGODB_CLIENT
-  - S3_SERVER
-  - S3_ACCESS_KEY
-  - S3_SECRET_KEY
-  - S3_BUCKET_NAME
+  - PARAMETER_ENV_VARIABLE: ...
+- odtp.ports:
+  - api: 7100
+  - logger: 7101
+- odtp.env:
+  - ODTP_MONGO_URL
+  - ODTP_S3_SERVER
+  - ODTP_BUCKET_NAME
+  - ODTP_ACCESS_KEY
+  - ODTP_SECRET_KEY
+  - ODTP_USER_ID
+  - ODTP_DIGITAL_TWIN
+  - ODTP_EXCUTION
+  - ODTP_STEP
+  - ODTP_COMPONENT
+  - ODTP_COMPONENT_VERSION
+
