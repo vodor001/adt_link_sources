@@ -90,7 +90,7 @@ The Service Component Integration Templates within this repository are licensed 
 - **Component Zoo Template**: BSD-3 license.
 
 ### Alternative Commercial Licensing
-Alternative commercial licensing options for the core platform and other components are available and can be negotiated through the EPFL Technology Transfer Office (tto.epfl.ch) or ETH Zürich Technology Transfer Office (https://ethz.ch/en/industry/transfer.html).
+Alternative commercial licensing options for the core platform and other components are available and can be negotiated through the EPFL Technology Transfer Office (https://tto.epfl.ch) or ETH Zürich Technology Transfer Office (https://ethz.ch/en/industry/transfer.html).
 
 ## Ethical Use and Legal Compliance Disclaimer
 Please note that this software should not be used to deliberately harm any individual or entity. Users and developers must adhere to ethical guidelines and use the software responsibly and legally. This disclaimer serves to remind all parties involved in the use or development of this software to engage in practices that are ethical, lawful, and in accordance with the intended purpose of the software.
