@@ -83,7 +83,9 @@ docker run -it --rm \
 odtp-component
 ```
 
-This command will run the component. If you want debug some errors and execute the docker in an interactive manner, you can use the flag `--entrypoint bash` when running docker. 
+This command will run the component. If you want debug some errors and execute the docker in an interactive manner, you can use the flag `--entrypoint bash` when running docker.
+
+Also if your tool is interactive such as an Streamlit app, don't forget to map the ports by using `-p XXXX:XXXX`. 
 
 ### Testing the component as part of odtp
 
