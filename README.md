@@ -1,4 +1,4 @@
-# odtp-component-template
+# ODTP Component Template
 
 This is a template that facilitates the development of new `odtp-components`. An `odtp` compatible component is a docker container able to perform a functional unit of computing in the digital twin. You can think of it as a blackbox that takes inputs files and/or parameters and perfom a task. Usually this lead to some files as a result (Ephemeral component), or to a visualization (Interactive component).
 
