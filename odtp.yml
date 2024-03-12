@@ -1,36 +1,45 @@
 # This file should contain basic component information for your component.
-- name: Name of the component
-- component_version: Version
-- repository: Repository
-- commit:
-- author: Author of the component
-- original_author: Author of the tool
-- description: Description
-- tags: ["example", "tutorial"]
-- arguments:
-  - PARAMETER A: ..
-- inputs:
-  - data: /data
+- component-name: Component Name
+- component-author: Component Author
+- component-version: Component Version
+- component-repository: Component Repository
+- component-license: Component License
+- component-type: ephemeral or interactive.
+- component-description: Description
+- tags:
+  - tag1
+  - tag2
+
+# Information about the tool
+- tool-name: Tool name
+- tool-author: Tool's author
+- tool-version: Tool version
+- tool-repository: Tool's repository
+- tool-license: Tool's license
+
+# If aplicable, ports exposed by the component
+- ports:
+  - XXXX
+
+# If aplicable, parameters exposed by the component
+# Add compatible datatype: str, int or float
+- parameters:
+  - PARAMETER A: datatype
+
+# If aplicable, data-input list required by the component
+- data-inputs:
+  - data
+  - cache
+
+# If aplicable, data-output list produced by the component
+- data-output:
+  - output
+
+# If aplicable, data-output list produced by the component
+- inputSchema: PATH_TO_INPUT_SCHEMA
+- outputSchema: PATH_TO_INPUT_SCHEMA
+
+# If aplicable, define devices needed such as gpus. 
 - devices:
   - gpus: False
-- inputSchema: ...
-- outputSchema: ...
-- env:
-  - PARAMETER_ENV_VARIABLE: ...
-- odtp.ports:
-  - api: 7100
-  - logger: 7101
-- odtp.env:
-  - ODTP_MONGO_SERVER
-  - ODTP_S3_SERVER
-  - ODTP_BUCKET_NAME
-  - ODTP_ACCESS_KEY
-  - ODTP_SECRET_KEY
-  - ODTP_USER_ID
-  - ODTP_DIGITAL_TWIN
-  - ODTP_EXCUTION
-  - ODTP_STEP
-  - ODTP_COMPONENT
-  - ODTP_COMPONENT_VERSION
-  - ODTP_SAVE_SNAPSHOT
 

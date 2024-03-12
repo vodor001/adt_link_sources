@@ -28,8 +28,8 @@ When the container is built an specific folder structure is generated:
     3. Copy (`cp -r`) or create symbolic links (`ln -s`) to locate the input files in `/odpt/odtp-input/` in the folder. 
     4. Run the tool. You can access to the parameters as environemnt variables (i.e. `$PARAMETER_A`)
     5. Manage the output exporting. At the end of the component execution all generated output should be located in `/odtp/odtp-output`. Copy all output files into this folder. 
-4. Describe all the metadata in odtp.yml
-5. Publish your tool in the ODTP Zoo. 
+4. Describe all the metadata in `odtp.yml`. Please check below for instructions.
+5. Publish your tool in the ODTP Zoo. (Temporaly unavailable)
 
 ### Semantic Validation
 
@@ -93,23 +93,107 @@ To execute the command as part of `odtp` please refer to our `odtp` documentatio
 
 https://odtp-org.github.io/odtp-manuals/
 
+## `odtp.yml`
+
+ODTP requires a set of metadata to work. These field should be filled by the developers.
+
+```yml
+# This file should contain basic component information for your component.
+- component-name: Component Name
+- component-author: Component Author
+- component-version: Component Version
+- component-repository: Component Repository
+- component-license: Component License
+- component-type: ephemeral or interactive.
+- component-description: Description
+- tags:
+  - tag1
+  - tag2
+
+# Information about the tool
+- tool-name: Tool name
+- tool-author: Tool's author
+- tool-version: Tool version
+- tool-repository: Tool's repository
+- tool-license: Tool's license
+
+# If aplicable, ports exposed by the component
+- ports:
+  - XXXX
+
+# If aplicable, parameters exposed by the component
+# Add compatible datatype: str, int or float
+- parameters:
+  - PARAMETER A: datatype
+
+# If aplicable, data-input list required by the component
+- data-inputs:
+  - data
+  - cache
+
+# If aplicable, data-output list produced by the component
+- data-output:
+  - output
+
+# If aplicable, data-output list produced by the component.
+# Temporally unavaible. 
+- inputSchema: PATH_TO_INPUT_SCHEMA
+- outputSchema: PATH_TO_INPUT_SCHEMA
+
+# If aplicable, define devices needed such as gpus. 
+- devices:
+  - gpus: False
+```
+
 ## Changelog
 
 - v0.3.0
-    - Turning `odtp-client` into a separate repository and adding it as a submodule in `odtp-component-client`
-    - Updating `app.sh` and tutorial. 
+  - Turning `odtp-client` into a separate repository and adding it as a submodule in `odtp-component-client`
+  - Updating `app.sh` and tutorial.
+  - Updating `odtp.yml` file.
 
 - v0.2.0
-    - Compatible with ODTP v.0.2.0 only with platform / components
-    - Compatible with configuration text files
-    - Improved loging system
-    - Accepting Digital Twins, Executions, and steps, metadata.
-    - Including component versioning in `odtp.yml` 
+  - Compatible with ODTP v.0.2.0 only with platform / components
+  - Compatible with configuration text files
+  - Improved loging system
+  - Accepting Digital Twins, Executions, and steps, metadata.
+  - Including component versioning in `odtp.yml`
 
 - v0.1.0
-    - Compatible with ODTP v.0.1.0 only with platform / components
-    - Compatible with configuration text files
+  - Compatible with ODTP v.0.1.0 only with platform / components
+  - Compatible with configuration text files
 
-## Development
+## Acknowledgments, Copyright, and Licensing
 
-Developed by SDSC/CSFM
+### Acknowledgments and Funding
+
+This work is part of the broader project **O**pen **D**igital **T**win **P**latform of the **S**wiss **M**obility **S**ystem (ODTP-SMS) funded by Swissuniversities CHORD grant Track B - Establish Projects. ODTP-SMS project is a joint endeavour by the Center for Sustainable Future Mobility - CSFM (ETH Zürich) and the Swiss Data Science Center - SDSC (EPFL and ETH Zürich). 
+The Swiss Data Science Center (SDSC) develops domain-agnostic standards and containerized components to manage digital twins. This includes the creation of the Core Platform (both back-end and front-end), Service Component Integration Templates, Component Ontology, and the Component Zoo template. 
+The Center for Sustainable Future Mobility (CSFM) develops mobility services and utilizes the components produced by SDSC to deploy a mobility digital twin platform. CSFM focuses on integrating mobility services and collecting available components in the mobility zoo, thereby applying the digital twin concept in the realm of mobility.
+ 
+### Copyright
+
+Copyright © 2023-2024 Swiss Data Science Center (SDSC), www.datascience.ch. All rights reserved.
+The SDSC is jointly established and legally represented by the École Polytechnique Fédérale de Lausanne (EPFL) and the Eidgenössische Technische Hochschule Zürich (ETH Zürich). This copyright encompasses all materials, software, documentation, and other content created and developed by the SDSC.
+
+### Intellectual Property (IP) Rights
+
+The Open Digital Twin Platform (ODTP) is the result of a collaborative effort between ETH Zurich (ETHZ) and the École Polytechnique Fédérale de Lausanne (EPFL). Both institutions hold equal intellectual property rights for the ODTP project, reflecting the equitable and shared contributions of EPFL and ETH Zürich in the development and advancement of this initiative.  
+ 
+### Licensing
+
+The Service Component Integration Templates within this repository are licensed under the BSD 3-Clause "New" or "Revised" License. This license allows for broad compatibility and standardization, encouraging open use and contribution. For the full license text, please see the LICENSE file accompanying these templates.
+
+#### Distinct Licensing for Other Components
+
+- **Core Platform**: Open-source under AGPLv3.
+- **Ontology**: Creative Commons Attribution-ShareAlike (CC BY-SA).
+- **Component Zoo Template**: BSD-3 license.
+
+### Alternative Commercial Licensing
+
+Alternative commercial licensing options for the core platform and other components are available and can be negotiated through the EPFL Technology Transfer Office (https://tto.epfl.ch) or ETH Zürich Technology Transfer Office (https://ethz.ch/en/industry/transfer.html).
+
+## Ethical Use and Legal Compliance Disclaimer
+
+Please note that this software should not be used to deliberately harm any individual or entity. Users and developers must adhere to ethical guidelines and use the software responsibly and legally. This disclaimer serves to remind all parties involved in the use or development of this software to engage in practices that are ethical, lawful, and in accordance with the intended purpose of the software.
