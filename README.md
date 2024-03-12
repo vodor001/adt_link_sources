@@ -95,7 +95,7 @@ https://odtp-org.github.io/odtp-manuals/
 
 ## `odtp.yml`
 
-ODTP requires a set of metadata to work. These field should be filled by the developers.
+ODTP requires a set of metadata to work. These fields should be filled by the developers.
 
 ```yml
 # This file should contain basic component information for your component.
@@ -135,10 +135,10 @@ ODTP requires a set of metadata to work. These field should be filled by the dev
 - data-output:
   - output
 
-# If aplicable, data-output list produced by the component.
-# Temporally unavaible. 
-- inputSchema: PATH_TO_INPUT_SCHEMA
-- outputSchema: PATH_TO_INPUT_SCHEMA
+# If aplicable, path to schemas to perform semantic validation.
+# Still under development. Ignore. 
+- schema-input: PATH_TO_INPUT_SCHEMA
+- schema-output: PATH_TO_OUTPUT_SCHEMA
 
 # If aplicable, define devices needed such as gpus. 
 - devices:
@@ -147,10 +147,14 @@ ODTP requires a set of metadata to work. These field should be filled by the dev
 
 ## Changelog
 
+- v0.3.1
+  - Updating schema fields in `odtp.yml` to kebab-case.
+
 - v0.3.0
   - Turning `odtp-client` into a separate repository and adding it as a submodule in `odtp-component-client`
   - Updating `app.sh` and tutorial.
   - Updating `odtp.yml` file.
+  - Adding `.DS_Store` to `.gitignore`
 
 - v0.2.0
   - Compatible with ODTP v.0.2.0 only with platform / components

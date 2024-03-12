@@ -35,9 +35,10 @@
 - data-output:
   - output
 
-# If aplicable, data-output list produced by the component
-- inputSchema: PATH_TO_INPUT_SCHEMA
-- outputSchema: PATH_TO_INPUT_SCHEMA
+# If aplicable, path to schemas to perform semantic validation.
+# Still under development. Ignore. 
+- schema-input: PATH_TO_INPUT_SCHEMA
+- schema-output: PATH_TO_OUTPUT_SCHEMA
 
 # If aplicable, define devices needed such as gpus. 
 - devices:
