@@ -99,53 +99,83 @@ ODTP requires a set of metadata to work. These fields should be filled by the de
 
 ```yml
 # This file should contain basic component information for your component.
-- component-name: Component Name
-- component-author: Component Author
-- component-version: Component Version
-- component-repository: Component Repository
-- component-license: Component License
-- component-type: ephemeral or interactive.
-- component-description: Description
-- tags:
+component-name: Component Name
+component-author: Component Author
+component-version: Component Version
+component-repository: Component Repository
+component-license: Component License
+component-type: ephemeral or interactive
+component-description: Description
+tags:
   - tag1
   - tag2
 
 # Information about the tool
-- tool-name: Tool name
-- tool-author: Tool's author
-- tool-version: Tool version
-- tool-repository: Tool's repository
-- tool-license: Tool's license
+tool-name: Tool name
+tool-author: Tool's author
+tool-version: Tool version
+tool-repository: Tool's repository
+tool-license: Tool's license
 
-# If aplicable, ports exposed by the component
-- ports:
-  - XXXX
+# If applicable, ports exposed by the component
+# Include Name, Description, and Port Value for each port
+ports:
+  - name: PORT A
+    description: Description of Port A
+    port-value: XXXX
+  - name: PORT B
+    description: Description of Port B
+    port-value: YYYY
 
-# If aplicable, parameters exposed by the component
-# Add compatible datatype: str, int or float
-- parameters:
-  - PARAMETER A: datatype
+# If applicable, parameters exposed by the component
+# Datatype can be str, int, float, or bool.
+parameters:
+  - name: PARAMETER A
+    default-value: DEFAULT_VALUE_A
+    datatype: DATATYPE_A
+    description: Description of Parameter A
+  - name: PARAMETER B
+    default-value: DEFAULT_VALUE_B
+    datatype: DATATYPE_B
+    description: Description of Parameter B
 
-# If aplicable, data-input list required by the component
-- data-inputs:
-  - data
-  - cache
+# If applicable, data-input list required by the component
+data-inputs:
+  - name: INPUT A
+    type: TYPE_A # Folder or filetype
+    path: VALUE_A  
+    description: Description of Input A
+  - name: INPUT B
+    type: TYPE_B # Folder or filetype
+    path: VALUE_B  
+    description: Description of Input B
 
-# If aplicable, data-output list produced by the component
-- data-output:
-  - output
+# If applicable, data-output list produced by the component
+data-output:
+  - name: OUTPUT A
+    type: TYPE_A # Folder or filetype
+    path: VALUE_A
+    description: Description of Output A
+  - name: OUTPUT B
+    type: TYPE_B # Folder or filetype
+    path: VALUE_B
+    description: Description of Output B
 
-# If aplicable, path to schemas to perform semantic validation.
-# Still under development. Ignore. 
-- schema-input: PATH_TO_INPUT_SCHEMA
-- schema-output: PATH_TO_OUTPUT_SCHEMA
+# If applicable, path to schemas to perform semantic validation.
+# Still under development. Ignore.
+schema-input: PATH_TO_INPUT_SCHEMA
+schema-output: PATH_TO_OUTPUT_SCHEMA
 
-# If aplicable, define devices needed such as gpus. 
-- devices:
-  - gpus: False
+# If applicable, define devices needed such as GPU.
+devices:
+  gpu: false
 ```
 
 ## Changelog
+
+- v0.3.2
+  - Extended `odtp.yml` parameters and input/output definition.
+  - `odtp.requirements.txt` transfered to submodule `odtp-component-client`.
 
 - v0.3.1
   - Updating schema fields in `odtp.yml` to kebab-case.
