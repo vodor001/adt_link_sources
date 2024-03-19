@@ -184,6 +184,8 @@ devices:
 ```
 
 ## Changelog
+- v0.3.3
+ - Inclusion of boundaries conditions and options in `odtp.yml` parameters.    
 
 - v0.3.2
   - Extended `odtp.yml` parameters and input/output definition.
