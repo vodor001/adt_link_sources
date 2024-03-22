@@ -4,18 +4,12 @@ This is a template that facilitates the development of new `odtp-components`. An
 
 Internally a component will run a bash script `./app/app.sh` that must include the commands for running your tool, and managing the input/output logic. While input files are located in the folder `/odtp/odtp-input`, parameters values are represented by environment variables within the component. In this way you can access to them by using `$` before the name of your variable. Finally, the output files generated are requested to be placed in `/odtp/odtp-output/`.
 
-## Internal data structure of a component
+## How to clone this repository? 
 
-When the container is built an specific folder structure is generated:
+> [!NOTE]  
+> This repository makes use of submodules. Therefore, when cloning it you need to include them. 
+> `git clone --recurse-submodules https://github.com/odtp-org/odtp-component-template`
 
-- `/odtp`: The main folder.
-- `/odtp/odtp-component-client`: This is the odtp client that will manage the execution, logging, and input/output functions of the component. It is include as a submodule, and the user doesn't need to modify it.
-- `/odtp/odtp-app`: This folder have the content of `/app` folder in this template. It contains the tool execution bash script and the tool configuration files. 
-- `/odtp/odtp-workdir`: This is the working directory where the tool repository should be placed and all the middle files such as cache folders.
-- `/odtp/odtp-input`: Input folder that is be mounted as volume for the docker container.
-- `/odtp/odtp-output`: Output folder that is mounted as volume for the docker container.
-- `/odtp/odtp-logs`: Folder reserved for internal loggings. 
-- `/odtp/odtp-config`: Folder reserved for odtp configuration. 
 
 ## How to create an odtp compatible component using this template?
 
@@ -34,6 +28,19 @@ When the container is built an specific folder structure is generated:
 ### Semantic Validation
 
 ODTP will be able to validate the input/output files. In order to do this we use SHACL validation. However, the developer should provide a schema of the input/output schema. This section is still under development and it will be available soon. 
+
+## Internal data structure of a component
+
+It's important to remark that when the container is built an specific folder structure is generated:
+
+- `/odtp`: The main folder.
+- `/odtp/odtp-component-client`: This is the odtp client that will manage the execution, logging, and input/output functions of the component. It is include as a submodule, and the user doesn't need to modify it.
+- `/odtp/odtp-app`: This folder have the content of `/app` folder in this template. It contains the tool execution bash script and the tool configuration files. 
+- `/odtp/odtp-workdir`: This is the working directory where the tool repository should be placed and all the middle files such as cache folders.
+- `/odtp/odtp-input`: Input folder that is be mounted as volume for the docker container.
+- `/odtp/odtp-output`: Output folder that is mounted as volume for the docker container.
+- `/odtp/odtp-logs`: Folder reserved for internal loggings. 
+- `/odtp/odtp-config`: Folder reserved for odtp configuration. 
 
 ## Testing the component
 
