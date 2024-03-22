@@ -7,7 +7,8 @@ Internally a component will run a bash script `./app/app.sh` that must include t
 ## How to clone this repository? 
 
 > [!NOTE]  
-> This repository makes use of submodules. Therefore, when cloning it you need to include them. 
+> This repository makes use of submodules. Therefore, when cloning it you need to include them.
+>  
 > `git clone --recurse-submodules https://github.com/odtp-org/odtp-component-template`
 
 
