@@ -118,12 +118,25 @@ tags:
   - tag1
   - tag2
 
-# Information about the tool
-tool-name: Tool name
-tool-author: Tool's author
-tool-version: Tool version
-tool-repository: Tool's repository
-tool-license: Tool's license
+# Information about the tools
+tools:
+  - tool-name: tool's name
+    tool-author: Tool's author
+    tool-version: Tool version
+    tool-repository: Tool's repository
+    tool-license: Tool's license
+
+# If your tool require some secrets token to be passed as ENV to the component
+# This won't be traced
+secrets:
+  - name: Key of the argument
+  - description: Description of the secret
+
+# If the tool requires some building arguments such as Matlab license
+build-args:
+  - name: Key of the argument
+  - description: Descriptio of the building argument
+  - secret: Bool
 
 # If applicable, ports exposed by the component
 # Include Name, Description, and Port Value for each port
@@ -188,12 +201,16 @@ schema-output: PATH_TO_OUTPUT_SCHEMA
 
 # If applicable, define devices needed such as GPU.
 devices:
-  gpu: false
+  gpu: Bool
 ```
 
 ## Changelog
+- v0.3.4
+  - Inclusion of `secrets` and `build-args` in `odtp.yml`
+  - Tools as list
+
 - v0.3.3
- - Inclusion of boundaries conditions and options in `odtp.yml` parameters.    
+  - Inclusion of boundaries conditions and options in `odtp.yml` parameters.    
 
 - v0.3.2
   - Extended `odtp.yml` parameters and input/output definition.
