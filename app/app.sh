@@ -10,9 +10,9 @@
 # Clone the repository of your tool and checkout to one specific commit. 
 #########################################################
 
-# git clone https://github.com/odtp-org/tool-example.git /odtp/odtp-workdir/tool-example
-# cd /odtp/odtp-workdir/tool-example
-# git checkout xxxxxxxxxxxx
+git clone https://github.com/vodor001/animal_digital_twin.git /odtp/odtp-workdir/adt
+cd /odtp/odtp-workdir/adt
+git checkout --branch v.0.1.0
 
 #########################################################
 # 2. CONFIG FILE CONFIGURATION
@@ -25,13 +25,13 @@
 # 3. INPUT FOLDER MANAGEMENT
 #########################################################
 
-# ln -s /odtp/odtp-input/... /odtp/odtp-workdir/...
+ln -s /odtp/odtp-input/data /odtp/odtp-workdir/adt/data
 
 #########################################################
 # 4. TOOL EXECUTION
 # While the output is managed by ODTP and placed in /odtp/odtp-output/
 #########################################################
-
+python3 link_sources.py ./data
 # COMMAND $PARAMETER_A #PARAMETER_B /odtp/odtp-input/data
 
 #########################################################
@@ -39,7 +39,7 @@
 # The selected output files generated should be placed in the output folder
 #########################################################
 
-# cp -r /odtp/odtp-workdir/output/* /odtp/odtp-output
+# cp -r /odtp/odtp-workdir/adt/data /odtp/odtp-output
 
 ############################################################################################
 # END OF MANUAL USER APP
