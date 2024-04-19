@@ -1,7 +1,7 @@
 # This file should contain basic component information for your component.
 component-name: ADT component for linking sources
 component-author: Jascha Grubel, Kristina Vodorezova
-component-version: v.0.1.0
+component-version: v.0.1.1
 component-repository: https://github.com/vodor001/odtp-component-adt.git
 component-license: BSD-3 license
 component-type: ephemeral
