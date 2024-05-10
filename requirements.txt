@@ -1,8 +1,7 @@
 pathlib
-shutil
 basic_plots
 json
-matplotlib.pyplot
+matplotlib
 pandas
 sys
 numpy
