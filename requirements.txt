@@ -1,7 +1,3 @@
-pathlib
-basic_plots
-json
-matplotlib
-pandas
-sys
-numpy
+matplotlib=3.8.0 
+pandas=2.1.1
+numpy= 1.26.0
