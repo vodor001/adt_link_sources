@@ -205,6 +205,10 @@ devices:
 ```
 
 ## Changelog
+
+- v0.4.0
+  - Update default Base and Python in Dockerfile to `ubuntu:22.04` and `python3.10`
+
 - v0.3.4
   - Inclusion of `secrets` and `build-args` in `odtp.yml`
   - Tools as list
