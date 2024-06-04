@@ -12,7 +12,7 @@
 
 git clone https://github.com/vodor001/animal_digital_twin.git /odtp/odtp-workdir/adt
 cd /odtp/odtp-workdir/adt
-git checkout --branch v.0.1.0
+git checkout v.0.1.0
 
 #########################################################
 # 2. CONFIG FILE CONFIGURATION
