@@ -1,8 +1,8 @@
 # This file should contain basic component information for your component.
 component-name: ADT component for linking sources
 component-author: Jascha Grubel, Kristina Vodorezova
-component-version: v.0.1.1
-component-repository: https://github.com/vodor001/odtp-component-adt.git
+component-version: v0.1.2
+component-repository: https://github.com/vodor001/adt_link_sources.git
 component-license: BSD-3 license
 component-type: ephemeral
 component-description: Loading the data and making preprocessing
@@ -15,8 +15,8 @@ tags:
 tools:
   - tool-name: adt
     tool-author: Jan Aarts
-    tool-version: v.0.1.0
-    tool-repository: https://github.com/vodor001/animal_digital_twin.git
+    tool-version: v0.1.0
+    tool-repository: https://github.com/vodor001/link_sources.git
     tool-license: MIT license
 
 # If your tool require some secrets token to be passed as ENV to the component
